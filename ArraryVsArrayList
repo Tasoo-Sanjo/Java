@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+
+public class ArrayVsArrayList {
+
+    public static void main(String[] args){
+
+        String[] friendsArray = {"John", "Jane", "Jill", "Jeff"};
+
+        ArrayList<String> friendsArrayList = new ArrayList<>(Arrays.asList("John", "Jane", "Jill", "Jeff"));
+
+        //Print an element
+        System.out.println(friendsArray[1]);
+        System.out.println(friendsArrayList.get(1));
+
+        //Size or Length
+        System.out.println(friendsArray.length);
+        System.out.println(friendsArrayList.size());
+
+        //Add elements
+        //Can't do that with arrays
+        friendsArrayList.add("Mitch");
+        System.out.println(friendsArrayList.get(4));
+
+        //Set an element
+        friendsArray[0] = "Carl";
+        System.out.println(friendsArray[0]);
+        friendsArrayList.set(0, "Carl");
+        System.out.println(friendsArrayList.get(0));
+
+        //Remove an element
+        //Can't do with arrays
+        friendsArrayList.remove("Jane");
+        System.out.println(friendsArrayList.get(1));
+
+        //Print the whole array or arraylist
+        for(int i = 0; i < friendsArray.length; i++) {
+            System.out.println(friendsArray[i]);
+        }
+        System.out.println(friendsArrayList);
+
+
+    }
+
+}

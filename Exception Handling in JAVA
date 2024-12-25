@@ -1,0 +1,39 @@
+public class ExceptionHandling {
+    public static void main(String[] args) {
+
+        //Exception
+        try {
+            int myInt = Integer.parseInt("Pants");
+        }
+        catch (NumberFormatException nfe) {
+            System.out.println("You entered a non-numeric value");
+        }
+
+        //No Exception
+        try {
+            int myInt = Integer.parseInt("1");
+        } catch (NumberFormatException nfe) {
+            System.out.println("You entered a non-numeric value");
+        }
+        System.out.println("Program has ended");
+
+        //Catching Multiple Exception
+        try {
+            int myInt = Integer.parseInt("Pants");
+        }
+        catch (NumberFormatException | NullPointerException e) {
+            System.out.println("You entered a non-numeric value");
+        }
+
+        //Adding Finally Block ; Will always run, no matter what!
+        try {
+            int myInt = Integer.parseInt("Pants");
+        }
+        catch (NumberFormatException nfe) {
+            System.out.println("You entered a non-numeric value");
+        }
+        finally {
+            System.out.println("It has ended");
+        }
+    }
+}
